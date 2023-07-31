@@ -12,19 +12,19 @@ const randomWords = {
      comparative: ['taller','healthier','better','worse','bigger','bolder','braver','brighter','busier','cheaper']
 }
 
-// +Email Subject Line Generator+✅✅
+
+//Chose a diferent random number to select a keyword index
 function generateRandomNumber(num) {
     // Gets # from 0 -> num - 1
     return Math.floor(Math.random() * num)
 }
 
-// Store the 'words' in an array✅✅
+// Store the 'words' in an array
 let emailSubjectLines = []
 
 // Iterate over the object
 // for(let word in randomWords) {
 //     let optionIdx = generateRandomNumber(randomWords[word].length)
-//     console.log(optionIdx);
 
 // use the object's properties to customize the subject line 
 
@@ -80,28 +80,11 @@ let emailSubjectLines = []
         emailSubjectLines.push(`You are ${randomWords.comparative[optionComparison]} than you think... Discover yourself`);
     }
 
-// 8. Adverb + verb + preposition + ajective + noun✅✅
-    function selfmadeLine(randomWords){
-        let optionAdverb = generateRandomNumber(randomWords.adverbs.length);
-        let optionVerb = generateRandomNumber(randomWords.verbs.length)
-        let optionPreposition = generateRandomNumber(randomWords.preposition.length);
-        let optionAdjective = generateRandomNumber(randomWords.verbs.length)       
-        let optionNoun = generateRandomNumber(randomWords.verbs.length)       
-        
-        emailSubjectLines.push(`${randomWords.adverbs[optionAdverb]} ${randomWords.verbs[optionVerb]} ${randomWords.preposition[optionPreposition]} ${randomWords.adjectives[optionAdjective]} ${randomWords.nouns[optionNoun]}`);
-    }
-
-
-
-
-
-
 
 function emailIdeas(emailSubjectLines){
     const formatted = emailSubjectLines.join('\n');
     console.log(formatted);
 }
-
 
 // Test functions
 famousPerson(randomWords);
